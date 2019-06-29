@@ -1,0 +1,67 @@
+git init // create local empty respository.
+
+we call remote respository origin
+git remote add origin <link>
+
+Pull files with 'git pull'
+
+Push your own changes into central repo with 'git push'
+
+
+-> git pull origin master
+
+// If git pull origin master throws fatal 'http' is not supported
+then set link without quotes.
+try git remote -v
+git remote set-url origin https://github.com/princeNITian/git-github.git
+
+
+
+// PULL 
+git pull origin master
+
+// PUSH
+git push origin master
+
+/*********************Making Changes*********************/
+
+git status -> tells you which files are added to index and are ready to commit
+
+git add -> Lets you add files to your index.
+
+git commit -> It refers to recording snapshots of the repository at a given time.
+Committed snapshots will never change unless done explicitly.
+
+If we make a new file it is called untracked file.
+We have to add it to index file.
+
+git commit -m "Some message here" // It will commit to local repo
+
+git add -A // all files will be added at once.
+
+git commit -a -m "message" // all files will be committed at once.
+
+//*****************PARALLEL DEVELOPMENT**************//
+Branches are pointer to a specific commit.
+Branches are of two types:
+-> Local Branches
+-> Remote-tracking Branches
+
+Creating a Branch
+git branch firstbranch
+To switch a branch
+git checkout firstbranch
+
+//Merging
+It is a way to combine the work od different branches together.
+Allows to branch off, develop a new feature and combine it back in.
+ 
+ whenever we merge the destination is always master
+ ie. come to master branch then:
+ git merge firstbranch
+
+ //once a file is added to index we don't need to use add agian and agian so we can use directly commit.
+
+ /// Rebasing -> this is also a way of combining the work between different branches.
+ It can be used to make a linear sequence of commits.
+   
